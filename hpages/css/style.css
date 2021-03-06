@@ -1,0 +1,31 @@
+body,html,canvas{
+    padding: 0;
+    margin: 0;
+}
+canvas{
+    opacity: 1;
+}
+model-viewer{
+    --poster-color: rgba(255, 255, 255, 0);
+    position:absolute;
+    margin: 0 auto;
+    left: 50vw;
+    top: 23vh;
+    width: 50vw;
+    height: 50vh;
+    transform: translateX(-50%);
+    border: 0px solid black;
+    border-radius: 1rem;
+    outline: none;
+}
+h1{
+    position: absolute;
+    color:red;
+    
+    left: 50vw;
+    top:10vh;
+    font-size: 23vw;
+    transform: translate(-50%,-50%);
+
+
+}
