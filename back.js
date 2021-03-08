@@ -70,7 +70,52 @@ http.createServer(function(req,res){
         })
     }
 
-    
+    //Logo
+    if(req.url=="/logo.png"){
+        fs.readFile('./hpages/logo.png',function(err,data){
+            handleErr(err);
+            res.write(data);
+            res.end();
+        })
+    }
+
+    //Main2js
+    if(req.url=="/js/main2.js"){
+        fs.readFile('./hpages/js/main2.js',function(err,data){
+            handleErr(err);
+            res.write(data);
+            res.end();
+        })
+    }
+
+    //FinalPinkBike
+    if(req.url=="/models/finalpinkbike.glb"){
+        fs.readFile('./hpages/models/finalpinkbike.glb',function(err,data){
+            handleErr(err);
+            res.write(data);
+            res.end();
+        })
+    }
+
+    //Handle login
+    if(req.url=="/login"){
+        res.writeHead(302, {
+            'Location': '/path.html'
+            //add other headers here...
+          });
+        res.end();
+    }
+
+    //Logged in page redirect
+    if(req.url=="/test.html"){
+        fs.readFile('./hpages/test.html', function(err,data){
+            handleErr(err);
+            res.writeHead(200,{'Content-Type':'text/html'})
+            res.write(data);
+            res.end();
+        })
+    }
+
 }).listen(8080);
 function handleErr(err){
     if(err!=null){

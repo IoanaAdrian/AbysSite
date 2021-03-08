@@ -3,19 +3,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Abys</title>
     <link rel="stylesheet" href="css/style.css">
-    
     <script src="js/p5.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/main2.js"></script>
+
     <script src="js/modelviewermin.js"></script>
     <script src="js/noborder.js"></script>
+    <script src="js/main2.js"></script>
 </head>
 <body>
     
-    <model-viewer src="./models/bici.glb" camera-controls auto-rotate rotation-per-second="60deg" style="border:none;outline:none;"></model-viewer>
-    <h1>Abys</h1>
-    
+    <model-viewer src="./models/finalpinkbike.glb" camera-controls camera-orbit="1deg 90deg 70%" auto-rotate rotation-per-second="60deg" style="border:none;outline:none;"></model-viewer>
 
+    <img src="logo.png" alt="">
+    
+    <!-- <button onclick="ShowLogin()" style="position: absolute; top: 80vh; left:20vh;">ShowLogin</button> -->
+
+    <div class="main" id="main" >
+        <p class="sign" align="center">Sign in to use one of our bikes!</p>
+        <form class="form1"action="/login" method="POST">
+          <input class="un " type="text" id="user" value="" align="center" placeholder="Username">
+          <input class="pass" type="password" id="pass" value="" align="center" placeholder="Password">
+          <br>
+          <br><br>
+          <form action="/test.html" method="GET">
+          <button  class="submit" onclick="Login()" type="button" >Sign in</button>
+          </form>
+          <br>             
+    </div>
+    <form action="/">
+    <div class = "BL">
+        <button type="button" class="buttL" type="submit" onclick="ShowInfo()">Business</button>
+    </div>
+    </form>
+    <form action="/">
+    <div class="BR">
+        <button type="button" class="buttR" onclick="ShowLogin()" type="submit">Customer</button>
+    </div>
+</form>
+    <div class="main2" id="main2" style="position: absolute;" >
+        <p>Contact us here:</p>
+        <p>Email: s.hoarders@gmail.com</p>
+        <p>Phone: 0773389765</p>         
+    </div>
+    <p style="position: absolute; top:90vh; left:50vw; transform: translateX(-50%);color:white;">Advertising Bikes at Your Service</p>
 </body>
 </html>
